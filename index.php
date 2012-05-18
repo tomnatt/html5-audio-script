@@ -30,6 +30,7 @@ if (isset($_GET["file"]) && !preg_match("/\//", $file)) {
 ?>
             <h2><?php echo $file; ?></h2>
             <audio controls="controls" autoplay="autoplay">
+                <source src="<?php echo str_replace(".mp3", ".ogg", $file); ?>" type="audio/ogg" />
                 <source src="<?php echo $file; ?>" type="audio/mp3" />
                 Your browser does not support the audio tag.
             </audio>
